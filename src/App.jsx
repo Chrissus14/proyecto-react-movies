@@ -1,5 +1,6 @@
 import React from 'react';
+import Title from './components/Title';
 
-const App = () => <h1>App Component working</h1>;
+const App = () => <Title />;
 
 export default App;
