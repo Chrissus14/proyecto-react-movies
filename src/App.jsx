@@ -1,5 +1,6 @@
 import React from 'react';
-import Poster from './components/Poster';
+// import Poster from './components/Poster';
+import Button from './components/Button';
 // import Genre from './components/Genre';
 // import Rating from './components/Rating';
 // import Directors from './components/Directors';
@@ -7,6 +8,6 @@ import Poster from './components/Poster';
 // import Plot from './components/Plot';
 // import Title from './components/Title';
 
-const App = () => <Poster />;
+const App = () => <Button />;
 
 export default App;
