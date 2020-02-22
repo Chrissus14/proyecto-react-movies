@@ -1,5 +1,6 @@
 import React from 'react';
 import Poster from '../components/Poster';
+import Button from '../components/Button';
 
 const PosterContainer = () => {
   return (
@@ -20,6 +21,7 @@ const PosterContainer = () => {
         <Poster />
         <Poster />
         <Poster />
+        <Button />
       </div>
     </div>
   );

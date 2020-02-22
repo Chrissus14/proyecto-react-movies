@@ -1,7 +1,6 @@
 import React from 'react';
-// import MovieInfo from './containers/MovieInfo';
-import PosterContainer from './containers/PosterContainer';
+import Home from './pages/Home';
 
-const App = () => <PosterContainer />;
+const App = () => <Home />;
 
 export default App;

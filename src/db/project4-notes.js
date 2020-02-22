@@ -8,11 +8,11 @@ const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 // Obtener películas
 `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`// Cargas más películas
 `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage +
-  1}`// Cargar info de una película en específico
+  1}` // Cargar info de una película en específico
 `${API_URL}movie/${this.props.match.params.id}?api_key=${API_KEY}&language=en-US`// Cargar info de los actores
 `${API_URL}movie/${this.props.match.params.movieId}/credits?api_key=${API_KEY}&language=en-US`// Cargar imagenes
-`${IMAGE_BASE_URL}w500${props.movie.poster_path}`// Cargar imagen encabezado
-`${IMAGE_BASE_URL}w1280${props.heroImage.backdrop_path}`// Cargar imagen actor
+`${IMAGE_BASE_URL}w500${props.movie.poster_path}` // Cargar imagen encabezado
+`${IMAGE_BASE_URL}w1280${props.heroImage.backdrop_path}` // Cargar imagen actor
 `${IMAGE_BASE_URL}w154/${props.actor.profile_path}`;
 
 // Obtener directores:
