@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="container-fluid bg-dark">
       <div className="container py-3  d-md-flex d-md-row justify-content-md-between">
         <div className="h1">
-          <a href="/">
+          <Link to="/" className="text-decoration-none">
             <span className="text-white">React</span>{' '}
             <span className="font-italic font-weight-bold text-success">Movies</span>
-          </a>
+          </Link>
         </div>
         <div>
           <img

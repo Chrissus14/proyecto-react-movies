@@ -22,20 +22,17 @@ const Pages = () => {
       });
   };
   useEffect(api, []);
-  const masPeliculas = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${currentPage +
+  const NEXT_PAGE = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${currentPage +
     1}`;
 
   const loadMovies = () => {
-    fetch(masPeliculas)
+    fetch(NEXT_PAGE)
       .then(response => response.json())
       .then(data => {
         setMovies([...movies, data.results]);
         setCurrentPage(data.page);
       });
   };
-
-  console.log(movies);
-  console.log(currentPage);
 
   return (
     <>

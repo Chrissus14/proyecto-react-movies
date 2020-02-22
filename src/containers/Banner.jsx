@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = props => {
   const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
-  const recentPoster = props.movie.map(poster => poster[0].poster_path);
+  const recentPoster = props.movie.map(poster => poster[0].backdrop_path);
   const BANNER_TITLE = props.movie.map(title => title[0].original_title);
   const PLOT = props.movie.map(plot => plot[0].overview);
   return (
