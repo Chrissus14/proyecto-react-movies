@@ -28,7 +28,6 @@ const MovieGeneralInfo = props => {
   };
 
   const convertMoney = money => {
-    // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/NumberFormat
     let formatter = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -37,10 +36,22 @@ const MovieGeneralInfo = props => {
     return formatter.format(money);
   };
 
-  console.log(movieData);
+  const hero__image = {
+    backgroundImage: `url(${`http://image.tmdb.org/t/p/w1280${movieData.backdrop_path}`})`,
+    height: '100%',
+    width: '100%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    position: 'relative'
+  };
+
   return (
-    <>
-      <section className="container py-3">
+    <div>
+      <section
+        className="container-fluid p-4 d-md-flex flex-md-column align-items-center"
+        style={hero__image}
+      >
         <MovieInfo
           title={movieData.original_title}
           plot={movieData.overview}
@@ -48,13 +59,13 @@ const MovieGeneralInfo = props => {
           rating={movieData.vote_average}
           poster={movieData.poster_path}
         />
-        <div className="d-md-flex justify-content-between">
+        <div className="text-white font-weight-bold d-md-flex justify-content-around p-2 bg-transparent container">
           <GeneralInfo title="Duración" info={calcTime(movieData.runtime)} />
           <GeneralInfo title="Presupuesto" info={convertMoney(movieData.budget)} />
           <GeneralInfo title="Ingresos" info={convertMoney(movieData.revenue)} />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

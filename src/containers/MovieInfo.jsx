@@ -7,8 +7,9 @@ import Directors from '../components/Directors';
 
 const MovieInfo = props => {
   const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
+
   return (
-    <div className="card mb-3" style={{ maxWidth: '960px' }}>
+    <div className="card bg-transparent" style={{ maxWidth: '960px' }}>
       <div className="row no-gutters">
         <div className="col-md-4">
           <img
@@ -19,12 +20,21 @@ const MovieInfo = props => {
           />
         </div>
         <div className="col-md-8">
-          <div className="card-body p-3">
-            <Title title={props.title} />
-            <Plot plot={props.plot} />
-            <Genre genres={props.genres} />
-            <Rating rating={props.rating} />
-            {/* <Directors /> */}
+          <div
+            className="card-body p-3 text-white"
+            style={{
+              backgroundColor: 'black',
+              opacity: '0.8',
+              height: '100%'
+            }}
+          >
+            <div>
+              <Title title={props.title} />
+              <Plot plot={props.plot} />
+              <Genre genres={props.genres} />
+              <Rating rating={props.rating} />
+              <Directors />
+            </div>
           </div>
         </div>
       </div>
