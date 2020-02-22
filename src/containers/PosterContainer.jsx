@@ -11,6 +11,7 @@ const PosterContainer = props => {
   );
   return (
     <div className="container py-4">
+      <span className="h1">Películas populares</span>
       <div className=" row d-md-flex flex-sm-column  flex-md-row flex-md-wrap">
         {POSTERS}
         <Button action={props.event} />
