@@ -3,16 +3,15 @@ import Poster from '../components/Poster';
 import Button from '../components/Button';
 
 const PosterContainer = props => {
-  console.log(props.data);
-  const MOVIES = props.data.map((movie, index) => (
-    <li>
-      <Poster data={movie} />
-    </li>
-  ));
+  const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
+  const POSTERS = props.posters.map(poster =>
+    poster.map(item => <Poster images={`${IMAGE_BASE_URL}w500${item.poster_path}`} />)
+  );
   return (
-    <div className="container">
+    <div className="container py-4">
+      {/* {console.log(props.posters)} */}
       <div className=" row d-md-flex flex-sm-column  flex-md-row flex-md-wrap">
-        {MOVIES}
+        {POSTERS}
         <Button />
       </div>
     </div>

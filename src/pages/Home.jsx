@@ -27,13 +27,12 @@ const Pages = () => {
       <div className="bg-light">
         {/* Header */}
         <Header />
-
         {/* Header */}
         {/* Banner */}
         <Banner movie={movies} />
         {/* Banner */}
         {/* PosterContainer */}
-        <div>Aqui va PosterContainer</div>
+        <PosterContainer posters={movies} />
         {/* PosterContainer */}
       </div>
     </>

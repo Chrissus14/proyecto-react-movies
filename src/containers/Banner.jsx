@@ -17,7 +17,7 @@ const Banner = props => {
             opacity: '0.3'
           }}
         />
-        <div className="card-img-overlay">
+        <div className="card-img-overlay container">
           <div className="row">
             <div className="col-md-6 ">
               <h5 className="card-title h1 font-weight-bold">{BANNER_TITLE}</h5>
